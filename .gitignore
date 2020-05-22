@@ -4,7 +4,9 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
-
+# tools files
+.DS_Store
+.idea
 # Crash log files
 crash.log
 
