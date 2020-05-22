@@ -20,15 +20,15 @@ variable "package_type" {
 }
 
 variable "build_pack_id" {
-  default     = 0
-  type        = number
   description = "The package ID of Enterprise Distributed Application Service (EDAS) Container, which can be retrieved by calling container version list interface ListBuildPack or the \"Pack ID\" column in container version list. When creating High-speed Service Framework (HSF) application, this parameter is required. Set 0 when non-HSF application"
+  type        = number
+  default     = 0
 }
 
 variable "description" {
-  default     = ""
   description = "The description of the application that you want to create."
   type        = string
+  default     = ""
 }
 
 variable "health_check_url" {
@@ -44,27 +44,28 @@ variable "logical_region_id" {
 }
 
 variable "ecu_info" {
-  default     = []
-  type        = list(string)
   description = "The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application.([\"aaaaa\", \"bbbb\"])"
+  type        = list(string)
+  default     = []
 }
 
 variable "group_id" {
-  default     = ""
   description = "The ID of the instance group where the application is going to be deployed. Set this parameter to all if you want to deploy the application to all groups. Omited when create an empty EDAS application."
   type        = string
+  default     = ""
+
 }
 
 variable "package_version" {
-  default     = ""
   description = "The version of the application that you want to deploy. It must be unique for every application. The length cannot exceed 64 characters. We recommended you to use a timestamp. Omited when create an empty EDAS application or use timestamp."
   type        = string
+  default     = ""
 }
 
 variable "war_url" {
-  default     = ""
-  type        = string
   description = "The address to store the uploaded web application (WAR) package for application deployment. Omited when create an empty EDAS application. This parameter is required when the deployType parameter is set as url. We recommend you to set this parameter to the address of an Object Storage Service (OSS) system."
+  type        = string
+  default     = ""
 }
 
 variable "slb_bind" {
@@ -74,31 +75,31 @@ variable "slb_bind" {
 }
 
 variable "slb_id" {
-  default     = ""
-  type        = string
   description = "The ID of the SLB instance that is going to be bound. Omited when not to bind a slb."
+  type        = string
+  default     = ""
 }
 
 variable "slb_ip" {
-  default     = ""
-  type        = string
   description = "The IP address that is allocated to the bound SLB instance. Omited when not to bind a slb."
+  type        = string
+  default     = ""
 }
 
 variable "type" {
-  default     = ""
-  type        = string
   description = "The type of the bound SLB instance: internet, intranet. Omited when not to bind a slb."
+  type        = string
+  default     = ""
 }
 
 variable "listener_port" {
-  default     = 80
-  type        = number
   description = "The listening port for the bound SLB instance. Set 0 when not to bind a slb."
+  type        = number
+  default     = 80
 }
 
 variable "vserver_group_id" {
-  default     = ""
-  type        = string
   description = "The ID of the virtual server (VServer) group associated with the intranet SLB instance. Omited when not to bind a slb."
+  type        = string
+  default     = ""
 }

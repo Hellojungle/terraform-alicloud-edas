@@ -25,15 +25,15 @@ variable "scale_app" {
 }
 
 variable "ecu_info" {
-  default     = []
-  type        = list(string)
   description = "The ID of the Elastic Compute Unit (ECU) where you want to deploy the application. Omited when not to scale this application."
+  type        = list(string)
+  default     = []
 }
 
 variable "force_status" {
-  default     = false
-  type        = bool
   description = "This parameter specifies whether to forcibly remove an ECS instance where the application is deployed. It is set as true only after the ECS instance expires. In normal cases, this parameter do not need to be specified."
+  type        = bool
+  default     = false
 }
 
 
@@ -48,13 +48,13 @@ variable "deploy_app" {
 }
 
 variable "package_version" {
-  default     = ""
-  type        = string
   description = "The version of the application that you want to deploy. It must be unique for every application. The length cannot exceed 64 characters. We recommended you to use a timestamp. Omited when not to deploy the application or use timestamp."
+  type        = string
+  default     = ""
 }
 
 variable "war_url" {
-  default     = ""
-  type        = string
   description = "The address to store the uploaded web application (WAR) package for application deployment. This parameter is required when the deployType parameter is set as url. We recommend you to set this parameter to the address of an Object Storage Service (OSS) system. Omited when not to deploy the application or use timestamp."
+  type        = string
+  default     = ""
 }

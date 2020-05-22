@@ -1,7 +1,25 @@
-# alicloud_edas_deploy_group
+Complete edas ecs application deploy group
+=============================
+
+Configuration in this directory create ecs application deloy group on Alibaba Cloud. 
+
+## Terraform versions
+
+The Module requires Terraform 0.12 and Terraform Provider AliCloud 1.82.0+.
+
+## Usage
+
+To run this example you need to execute:
+
+```bash
+$ terraform init
+$ terraform plan
+$ terraform apply
+```
+Run `terraform destroy` when you don't need these resources.
 
 
-# Input
+## Input
 
 | Name  |  Description | Type | Default | Required|
 | :-----|:----------|:-----|:--------|:--------|
