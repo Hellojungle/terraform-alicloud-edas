@@ -5,7 +5,7 @@ variable "create" {
 }
 
 variable "application_name" {
-  description = "Name of your EDAS application. Only letters '-' '_' and numbers are allowed. The length cannot exceed 36 characters"
+  description = "Name of your EDAS application. Only letters, '-', '_' and numbers are allowed. The length cannot exceed 36 characters."
   type        = string
 }
 
@@ -20,7 +20,7 @@ variable "package_type" {
 }
 
 variable "build_pack_id" {
-  description = "The package ID of Enterprise Distributed Application Service (EDAS) Container, which can be retrieved by calling container version list interface ListBuildPack or the \"Pack ID\" column in container version list. When creating High-speed Service Framework (HSF) application, this parameter is required. Set 0 when non-HSF application"
+  description = "The package ID of Enterprise Distributed Application Service (EDAS) Container, which can be retrieved by calling container version list interface ListBuildPack or the \"Pack ID\" column in container version list. When creating High-speed Service Framework (HSF) application, this parameter is required. Set 0 when non-HSF application."
   type        = number
   default     = 0
 }
@@ -38,13 +38,13 @@ variable "health_check_url" {
 }
 
 variable "logical_region_id" {
-  description = "The ID of the namespace where you want to create the application.(cn-shenzhen:aaa)"
+  description = "The ID of the namespace where you want to create the application.(cn-shenzhen:aaa)."
   type        = string
   default     = ""
 }
 
 variable "ecu_info" {
-  description = "The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application.([\"aaaaa\", \"bbbb\"])"
+  description = "The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application.([\"aaaaa\", \"bbbb\"])."
   type        = list(string)
   default     = []
 }

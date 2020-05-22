@@ -8,9 +8,11 @@ Terraform module which create both edas ecs cluster and ecs application on Aliba
 
 These types of resources are supported:
 
-* [ecs_cluster](https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/edas_cluster.html.markdown)
+* [edas_cluster](https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/edas_cluster.html.markdown)
 
-* [ecs_application](https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/edas_application.html.markdown)
+* [edas_application](https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/edas_application.html.markdown)
+
+Kubernetes related will arrive soon.
 
 ## Terraform versions
 
@@ -23,6 +25,8 @@ Create both edas ecs cluster and ecs application
    ```
    module "edas" {
      source             = "terraform-alicloud-modules/edas/alicloud
+     region             = "cn-hangzhou"
+     profile            = "your-profile-name"
      cluster_name       = "edas-xxx"
      logical_region_id  = "cn-shenzhen:xxx"
      vpc_id             = "vpc-xxx"

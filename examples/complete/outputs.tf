@@ -1,5 +1,5 @@
 output "cluster_id" {
-  description = "The ID of ecs cluster"
+  description = "The ID of ecs cluster."
   value       = module.edas.this_cluster_id
 }
 
@@ -19,6 +19,6 @@ output "cluster_member_ids" {
 }
 
 output "app_id" {
-  description = "The ID of ecs app"
+  description = "The ID of ecs app."
   value       = module.edas.this_app_id
 }

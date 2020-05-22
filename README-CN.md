@@ -6,13 +6,15 @@ Terraform 模块用于在阿里云上创建edas ecs集群和edas ecs应用。
 
 支持以下的资源类型:
 
-* [ecs_cluster](https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/edas_cluster.html.markdown)
+* [edas_cluster](https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/edas_cluster.html.markdown)
 
-* [ecs_application](https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/edas_application.html.markdown)
+* [edas_application](https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/edas_application.html.markdown)
+
+Kubernetes相关的能力敬请等待.
 
 ## Terraform 版本
 
-本 Module 要求使用 Terraform 0.12 和 阿里云 Provider 1.56.0+。
+本 Module 要求使用 Terraform 0.12 和 阿里云 Provider 1.82.0+。
 
 ## Usage
 
@@ -21,6 +23,8 @@ Terraform 模块用于在阿里云上创建edas ecs集群和edas ecs应用。
    ```
    module "edas" {
      source             = "terraform-alicloud-modules/edas/alicloud
+     region             = "cn-hangzhou"
+     profile            = "your-profile-name"
      cluster_name       = "edas-xxx"
      logical_region_id  = "cn-shenzhen:xxx"
      vpc_id             = "vpc-xxx"
