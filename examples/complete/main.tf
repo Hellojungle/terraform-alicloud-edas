@@ -1,5 +1,5 @@
 module "edas" {
-  source = "../"
+  source = "../.."
 
   application_name = "test-example"
   cluster_name = "test-example"
