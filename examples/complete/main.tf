@@ -1,5 +1,20 @@
+variable "region" {
+  default = "cn-hangzhou"
+}
+
+variable "profile" {
+  default = "default"
+}
+
+provider "alicloud" {
+  region = var.region
+  profile = var.profile
+}
+
 module "edas" {
   source = "../.."
+  region = var.region
+  profile = var.profile
 
   application_name = "test-example"
   cluster_name = "test-example"

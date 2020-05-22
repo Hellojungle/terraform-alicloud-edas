@@ -3,9 +3,6 @@ Complete edas ecs cluster
 
 Configuration in this directory create ecs cluster on Alibaba Cloud. 
 
-## Terraform versions
-
-The Module requires Terraform 0.12 and Terraform Provider AliCloud 1.82.0+.
 
 ## Usage
 

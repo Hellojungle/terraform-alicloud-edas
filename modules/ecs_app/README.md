@@ -3,10 +3,6 @@ Complete edas ecs application
 
 Configuration in this directory create ecs application on Alibaba Cloud. 
 
-## Terraform versions
-
-The Module requires Terraform 0.12 and Terraform Provider AliCloud 1.82.0+.
-
 ## Usage
 
 To run this example you need to execute:
