@@ -66,9 +66,9 @@ variable "ecs_import" {
 }
 
 variable "instance_ids" {
-  default     = []
-  type        = list(string)
   description = "The ID of instance. e.g. instanceId1, instanceId2. Omited when not to import ecs. ([\"aaaaa\", \"bbbb\"])"
+  type        = list(string)
+  default     = []
 }
 
 

@@ -1,3 +1,11 @@
+provider "alicloud" {
+  profile                 = var.profile != "" ? var.profile : null
+  shared_credentials_file = var.shared_credentials_file != "" ? var.shared_credentials_file : null
+  region                  = var.region != "" ? var.region : null
+  skip_region_validation  = var.skip_region_validation
+  configuration_source  = "terrform-alicloud-modules/ecs_app"
+}
+
 resource "alicloud_edas_application" "this" {
   count             = var.create ? 1 : 0
   application_name  = var.application_name
