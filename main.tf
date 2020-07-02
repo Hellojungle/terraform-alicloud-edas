@@ -43,11 +43,11 @@ module "ecs_app" {
   group_id            = var.group_id
   package_version     = var.package_version
   war_url             = var.war_url
-  slb_bind            = var.slb_bind
+  slb_bind            = var.bind_slb
   slb_id              = var.slb_id
   slb_ip              = var.slb_ip
-  type                = var.type
-  listener_port       = var.listener_port
-  vserver_group_id    = var.vserver_group_id
+  type                = var.slb_type
+  listener_port       = var.slb_listener_port
+  vserver_group_id    = var.slb_vserver_group_id
 }
 

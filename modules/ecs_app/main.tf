@@ -23,7 +23,7 @@ resource "alicloud_edas_application" "this" {
 
 
 resource "alicloud_edas_slb_attachment" "this" {
-  count             = var.slb_bind ? 1 : 0
+  count             = var.slb_bind && var.slb_bind ? 1 : 0
   app_id            = alicloud_edas_application.this[count.index].id
   slb_id            = var.slb_id
   slb_ip            = var.slb_ip

@@ -13,7 +13,7 @@ resource "alicloud_edas_deploy_group" "this" {
 }
 
 resource "alicloud_edas_application_scale" "this" {
-  count         = var.scale_app ? 1 : 0
+  count         = var.scale_app && var.create ? 1 : 0
   app_id        = var.app_id
   deploy_group  = split(":", alicloud_edas_deploy_group.this[count.index].id)[2]
   ecu_info      = var.ecu_info
@@ -34,7 +34,7 @@ resource "alicloud_edas_application_deployment" "this" {
   depends_on = [
     alicloud_edas_application_scale.this,
   ]
-  count           = var.deploy_app ? 1 : 0
+  count           = var.create && var.deploy_app ? 1 : 0
   app_id          = var.app_id
   group_id        = split(":", alicloud_edas_deploy_group.this[count.index].id)[2]
   package_version = var.package_version

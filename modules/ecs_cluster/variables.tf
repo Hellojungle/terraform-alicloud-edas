@@ -22,7 +22,7 @@ variable "skip_region_validation" {
 }
 
 variable "create" {
-  description = "Whether to create this resource or not?"
+  description = "Whether to create this cluster or not?"
   type        = bool
   default     = true
 }

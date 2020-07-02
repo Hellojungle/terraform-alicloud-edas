@@ -26,7 +26,7 @@ variable "skip_region_validation" {
 ###############
 
 variable "create_cluster" {
-  description = "Whether to create this resource or not?"
+  description = "Whether to create this cluster or not?"
   type        = bool
   default     = true
 }
@@ -66,7 +66,7 @@ variable "ecs_import" {
 }
 
 variable "instance_ids" {
-  description = "The ID of instance. e.g. instanceId1, instanceId2. Omited when not to import ecs. ([\"aaaaa\", \"bbbb\"])"
+  description = "The ID of ECS instance. e.g. instanceId1, instanceId2. Omited when not to import ecs. ([\"aaaaa\", \"bbbb\"])"
   type        = list(string)
   default     = []
 }
@@ -141,7 +141,7 @@ variable "war_url" {
   default     = ""
 }
 
-variable "slb_bind" {
+variable "bind_slb" {
   description = "Whether to bind a slb to the application."
   type        = bool
   default     = false
@@ -159,19 +159,19 @@ variable "slb_ip" {
   default     = ""
 }
 
-variable "type" {
+variable "slb_type" {
   description = "The type of the bound SLB instance: internet, intranet. Omited when not to bind a slb."
   type        = string
   default     = ""
 }
 
-variable "listener_port" {
+variable "slb_listener_port" {
   description = "The listening port for the bound SLB instance. Set 0 when not to bind a slb."
   type        = number
   default     = 80
 }
 
-variable "vserver_group_id" {
+variable "slb_vserver_group_id" {
   description = "The ID of the virtual server (VServer) group associated with the intranet SLB instance. Omited when not to bind a slb."
   type        = string
   default     = ""

@@ -16,7 +16,7 @@ resource "alicloud_edas_cluster" "this" {
 }
 
 resource "alicloud_edas_instance_cluster_attachment" "this" {
-  count = var.ecs_import ? 1 : 0
+  count = var.create && var.ecs_import ? 1 : 0
   cluster_id = alicloud_edas_cluster.this[count.index].id
   instance_ids = var.instance_ids
 }
